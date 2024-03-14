@@ -1,4 +1,4 @@
-﻿// MIT License
+// MIT License
 //
 // Copyright (c) 2024 SPIN - Space Innovation
 //
@@ -20,7 +20,12 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-global using MediatR;
-global using UnitsNet;
-global using SPIN.Contracts.Responses;
-global using SPIN.Contracts.Requests;
+namespace SPIN.Contracts.Requests;
+
+/// <summary>
+/// Represents a request to get the temperature.
+/// </summary>
+
+class GetTemperatureRequest : IRequest<GetTemperatureResponse>
+{ }
+

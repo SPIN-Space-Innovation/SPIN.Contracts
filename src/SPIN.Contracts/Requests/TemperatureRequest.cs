@@ -1,1 +1,0 @@
-namespace SPIN.Contracts.Requests;

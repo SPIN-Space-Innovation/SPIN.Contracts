@@ -1,4 +1,4 @@
-﻿// MIT License
+// MIT License
 //
 // Copyright (c) 2024 SPIN - Space Innovation
 //
@@ -20,7 +20,28 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-global using MediatR;
-global using UnitsNet;
-global using SPIN.Contracts.Responses;
-global using SPIN.Contracts.Requests;
+namespace SPIN.Contracts.Responses;
+
+/// <summary>
+/// Represents a response to get the temperature.
+/// </summary>
+
+class GetTemperatureResponse
+{
+    public Temperature Temperature { get; set; }
+    public DateTime Time { get; set; }
+    public Guid Id { get; }
+
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GetTemperatureResponse"/> class.
+    /// </summary>
+    /// <param name="temperature"></param>
+    /// <param name="time"></param>
+    
+    public GetTemperatureResponse(Temperature temperature, DateTime time)
+    {
+        Temperature = temperature;
+        Time = time;
+        Id = Guid.NewGuid();
+    }
+}
