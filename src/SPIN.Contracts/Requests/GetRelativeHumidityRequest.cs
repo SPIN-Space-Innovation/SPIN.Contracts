@@ -1,4 +1,4 @@
-﻿// MIT License
+// MIT License
 //
 // Copyright (c) 2024 SPIN - Space Innovation
 //
@@ -20,7 +20,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-global using MediatR;
-global using UnitsNet;
+namespace SPIN.Contracts.Requests;
 
-global using SPIN.Contracts.Responses;
+/// <summary>
+/// Represents a request to get the relative humidity.
+/// </summary>
+public class GetRelativeHumidityRequest : IRequest<GetRelativeHumidityResponse>;

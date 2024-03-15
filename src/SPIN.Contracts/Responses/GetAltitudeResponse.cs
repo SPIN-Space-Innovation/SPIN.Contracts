@@ -1,4 +1,4 @@
-﻿// MIT License
+// MIT License
 //
 // Copyright (c) 2024 SPIN - Space Innovation
 //
@@ -20,7 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-global using MediatR;
-global using UnitsNet;
+namespace SPIN.Contracts.Responses;
 
-global using SPIN.Contracts.Responses;
+/// <summary>
+/// Represents a response containing altitude and time information.
+/// </summary>
+public class GetAltitudeResponse
+{
+    public Guid Id { get; } = Guid.NewGuid();
+
+    public required Length Altitude { get; set; }
+
+    public required DateTime Time { get; set; }
+}
