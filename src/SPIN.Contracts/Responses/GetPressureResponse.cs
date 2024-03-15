@@ -25,23 +25,11 @@ namespace SPIN.Contracts.Responses;
 /// <summary>
 /// Represents a response to get the pressure.
 /// </summary>
-
 class GetPressureResponse
 {
-    public Pressure Pressure { get; set; }
-    public DateTime Time { get; set; }
-    public Guid Id { get; }
+    public Guid Id { get; } = Guid.NewGuid();
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="GetPressureResponse"/> class.
-    /// </summary>
-    /// <param name="Pressure"></param>
-    /// <param name="time"></param>
-    
-    public GetPressureResponse(Pressure pressure, DateTime time)
-    {
-        Pressure = pressure;
-        Time = time;
-        Id = Guid.NewGuid();
-    }
+    public Pressure Pressure { get; set; }
+
+    public DateTime Time { get; set; }
 }

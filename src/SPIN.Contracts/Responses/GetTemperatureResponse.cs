@@ -25,23 +25,11 @@ namespace SPIN.Contracts.Responses;
 /// <summary>
 /// Represents a response to get the temperature.
 /// </summary>
-
 class GetTemperatureResponse
 {
-    public Temperature Temperature { get; set; }
-    public DateTime Time { get; set; }
-    public Guid Id { get; }
+    public Guid Id { get; } = Guid.NewGuid();
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="GetTemperatureResponse"/> class.
-    /// </summary>
-    /// <param name="temperature"></param>
-    /// <param name="time"></param>
-    
-    public GetTemperatureResponse(Temperature temperature, DateTime time)
-    {
-        Temperature = temperature;
-        Time = time;
-        Id = Guid.NewGuid();
-    }
+    public required Temperature Temperature { get; set; }
+
+    public required DateTime Time { get; set; }
 }

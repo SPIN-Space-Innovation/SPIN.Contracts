@@ -25,7 +25,4 @@ namespace SPIN.Contracts.Requests;
 /// <summary>
 /// Represents a request to get the pressure.
 /// </summary>
-
-class GetPressureRequest : IRequest<GetPressureResponse>
-{ }
-
+class GetPressureRequest : IRequest<GetPressureResponse>;
