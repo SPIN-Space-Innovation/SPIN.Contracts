@@ -8,8 +8,8 @@
   <PropertyGroup>
     <PackageId>SPIN.Contracts</PackageId>
     <Version>0.1.0</Version>
-    <Authors>Rikarnto Bariampa</Authors>
-    <Company>SPIN</Company>
+    <Authors>SPIN - Space Innovation Avionics</Authors>
+    <Company>SPIN - Space Innovation</Company>
     <RepositoryUrl>https://github.com/SPIN-Space-Innovation/SPIN.Contracts</RepositoryUrl>
   </PropertyGroup>
 
