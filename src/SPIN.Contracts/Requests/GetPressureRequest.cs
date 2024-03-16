@@ -25,4 +25,12 @@ namespace SPIN.Contracts.Requests;
 /// <summary>
 /// Represents a request to get the pressure.
 /// </summary>
-class GetPressureRequest : IRequest<GetPressureResponse>;
+class GetPressureRequest : IRequest<GetPressureResponse>
+{
+    public static readonly GetPressureRequest Instance = new()
+    {
+        RequestId = Guid.Empty
+    };
+
+    public required Guid RequestId { get; init; }
+}

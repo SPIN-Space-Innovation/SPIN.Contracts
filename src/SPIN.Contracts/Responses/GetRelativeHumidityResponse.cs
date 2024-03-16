@@ -27,7 +27,7 @@ namespace SPIN.Contracts.Responses;
 /// </summary>
 public class GetRelativeHumidityResponse
 {
-    public Guid Id { get; } = Guid.NewGuid();
+    public required Guid RequestId { get; init; }
 
     public required RelativeHumidity RelativeHumidity { get; set; }
 

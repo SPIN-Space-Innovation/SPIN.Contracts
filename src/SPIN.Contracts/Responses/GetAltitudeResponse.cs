@@ -27,7 +27,7 @@ namespace SPIN.Contracts.Responses;
 /// </summary>
 public class GetAltitudeResponse
 {
-    public Guid Id { get; } = Guid.NewGuid();
+    public required Guid RequestId { get; init; }
 
     public required Length Altitude { get; set; }
 

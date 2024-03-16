@@ -27,7 +27,7 @@ namespace SPIN.Contracts.Responses;
 /// </summary>
 class GetPressureResponse
 {
-    public Guid Id { get; } = Guid.NewGuid();
+    public required Guid RequestId { get; init; }
 
     public required Pressure Pressure { get; set; }
 

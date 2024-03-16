@@ -25,4 +25,12 @@ namespace SPIN.Contracts.Requests;
 /// <summary>
 /// Represents a request to get altitude information.
 /// </summary>
-public class GetAltitudeRequest : IRequest<GetAltitudeResponse>;
+public class GetAltitudeRequest : IRequest<GetAltitudeResponse>
+{
+    public static readonly GetAltitudeRequest Instance = new()
+    {
+        RequestId = Guid.Empty
+    };
+
+    public required Guid RequestId { get; init; }
+}

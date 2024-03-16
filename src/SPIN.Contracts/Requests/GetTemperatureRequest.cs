@@ -25,4 +25,12 @@ namespace SPIN.Contracts.Requests;
 /// <summary>
 /// Represents a request to get the temperature.
 /// </summary>
-class GetTemperatureRequest : IRequest<GetTemperatureResponse>;
+class GetTemperatureRequest : IRequest<GetTemperatureResponse>
+{
+    public static readonly GetTemperatureRequest Instance = new()
+    {
+        RequestId = Guid.Empty
+    };
+
+    public required Guid RequestId { get; init; }
+}

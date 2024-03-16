@@ -25,4 +25,12 @@ namespace SPIN.Contracts.Requests;
 /// <summary>
 /// Represents a request to get the relative humidity.
 /// </summary>
-public class GetRelativeHumidityRequest : IRequest<GetRelativeHumidityResponse>;
+public class GetRelativeHumidityRequest : IRequest<GetRelativeHumidityResponse>
+{
+    public static readonly GetRelativeHumidityRequest Instance = new()
+    {
+        RequestId = Guid.Empty
+    };
+
+    public required Guid RequestId { get; init; }
+}
