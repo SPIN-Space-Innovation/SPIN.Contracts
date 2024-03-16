@@ -29,7 +29,7 @@ class GetPressureResponse
 {
     public Guid Id { get; } = Guid.NewGuid();
 
-    public Pressure Pressure { get; set; }
+    public required Pressure Pressure { get; set; }
 
-    public DateTime Time { get; set; }
+    public required DateTime Time { get; set; }
 }
