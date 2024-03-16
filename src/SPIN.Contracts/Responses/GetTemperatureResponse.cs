@@ -25,7 +25,7 @@ namespace SPIN.Contracts.Responses;
 /// <summary>
 /// Represents a response to get the temperature.
 /// </summary>
-class GetTemperatureResponse
+public class GetTemperatureResponse
 {
     public required Guid RequestId { get; init; }
 
